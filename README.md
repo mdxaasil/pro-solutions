@@ -1,2 +1,2 @@
 # pro-solutions
-Elegant solutions I've seen.
+Some elegant solutions I've seen.
