@@ -14,7 +14,7 @@ int fib(int N)
 }
 ```
 
-# 2. Fibonacci number
+# 2. Meeting on the Line
 https://codeforces.com/contest/1730/problem/B
 
 ```cpp
