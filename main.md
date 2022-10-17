@@ -60,3 +60,60 @@ int main() {
         solve();
 }
 ```
+# 3. Rebellion
+https://codeforces.com/contest/1746/problem/B
+
+```cpp
+#include "bits/stdc++.h"
+ 
+using namespace std;
+ 
+#define endl '\n'
+#define MAX LLONG_MAX
+#define MIN LLONG_MIN
+#define rep(i, a, b, inc) for(long long i = a; i < b; i += inc)
+#define REP(i, n) rep(i, 0, n, 1)
+#define all(x) (x).begin(), (x).end()
+#define pb push_back
+#define ff first
+#define ss second
+#define d1(x) cerr << #x<<" "<< x << endl;
+#define d2(x, y) cerr << "## " << #x << " : " << x << " | " << #y << " : " << y << " ##\n";
+ 
+ 
+typedef long long ll;
+typedef long double ld;
+ 
+void init_code()
+{ 
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+}
+
+ll solve(ll n)
+{
+    vector<ll> a(n);
+    cin>>a;
+    ll o = count(all(a), 0);
+    ll ans = 0;
+    for(ll i = 0;i<o;i++)
+        if(a[i]!=0) ans++;
+    return ans;
+}
+
+int main()
+{
+    init_code();
+
+    ll T=1, n, c;
+    cin >> T;
+    while (T--)
+    {
+        cin >> n;
+        c = solve(n);
+        cout << c << endl; //(c?"YES":"NO")
+    }
+    return 0;
+}
+```
