@@ -69,17 +69,7 @@ https://codeforces.com/contest/1746/problem/B
 using namespace std;
  
 #define endl '\n'
-#define MAX LLONG_MAX
-#define MIN LLONG_MIN
-#define rep(i, a, b, inc) for(long long i = a; i < b; i += inc)
-#define REP(i, n) rep(i, 0, n, 1)
-#define all(x) (x).begin(), (x).end()
-#define pb push_back
-#define ff first
-#define ss second
-#define d1(x) cerr << #x<<" "<< x << endl;
-#define d2(x, y) cerr << "## " << #x << " : " << x << " | " << #y << " : " << y << " ##\n";
- 
+
  
 typedef long long ll;
 typedef long double ld;
@@ -116,4 +106,42 @@ int main()
     }
     return 0;
 }
+```
+# 3. Count numbers up to N having Kth bit set -  O(1)
+
+```cpp
+
+// Function to return the count
+// of number of 1's at ith bit
+// in a range [1, n - 1]
+long long getcount(long long n, int k)
+{
+	// Store count till nearest
+	// power of 2 less than N
+	long long res = (n >> (k + 1)) << k;
+
+	// If K-th bit is set in N
+	if ((n >> k) & 1)
+
+		// Add to result the nearest
+		// power of 2 less than N
+		res += n & ((1ll << k) - 1);
+
+	// Return result
+	return res;
+}
+
+// Driver Code
+int main()
+{
+
+	long long int N = 14;
+	int K = 2;
+
+	// Function Call
+	cout << getcount(N + 1, K) << endl;
+
+	return 0;
+}
+
 ```
