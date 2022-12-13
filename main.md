@@ -107,7 +107,7 @@ int main()
     return 0;
 }
 ```
-# 3. Count numbers up to N having Kth bit set -  O(1)
+# 4. Count numbers up to N having Kth bit set -  O(1)
 
 ```cpp
 
