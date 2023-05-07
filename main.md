@@ -170,7 +170,7 @@ Let n = 6,
 => 6 will occur 1 times in F(6)
 
 # 6.SPOJ ABC PATH
-
+https://www.spoj.com/problems/ABCPATH/
 ```cpp
 #include "bits/stdc++.h"
 using namespace std;
